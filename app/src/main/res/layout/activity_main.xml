@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <SurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+    </SurfaceView>
+
+    <ImageSwitcher
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageSwitcher"
+        android:layout_row="0"
+        android:layout_column="2"
+        android:layout_gravity="right|top"
+        android:layout_margin="15dp" />
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:background="#373125">
+
+        <RelativeLayout
+            android:id="@+id/container_makephoto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:layout_width="76dp"
+                android:layout_height="76dp"
+                android:background="@drawable/make_photo"
+                android:onClick="onClickGetPhoto"
+                android:id="@+id/button4"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/recam"
+                android:src="@drawable/recam"
+                android:onClick="onClickRecam"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="35dp"
+                android:layout_marginStart="35dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/container_presave"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cancel"
+                android:onClick="onClickCancel"
+                android:background="@drawable/btn_cancel_union"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="34dp"
+                android:layout_marginStart="34dp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/done"
+                android:onClick="onClickDone"
+                android:background="@drawable/btn_done_union"
+                android:layout_marginRight="34dp"
+                android:layout_marginEnd="34dp"
+                android:layout_alignTop="@+id/cancel"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton"
+                android:background="@drawable/crop"
+                android:layout_gravity="left|bottom"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <ImageSwitcher
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageSwitcher2"
+        android:layout_gravity="right|center_vertical" />
+</FrameLayout>
